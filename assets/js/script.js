@@ -9,11 +9,11 @@ var date = moment().format('MMMM Do');
 // Display stuff
 currentDayP.text("Today is " + dayOfWeek + ", " + date);
 
-for (i=8; i<19; i++) {
-    var hour = moment({ hour:i, minute:0 }).format('h:mm A'); // Docs - Parse - Object
-    var htmlContent = "<p>" + hour + "</p>";
-    timeBlockContainer.append(htmlContent);
-}
+// for (i=8; i<19; i++) {
+//     var hour = moment({ hour:i, minute:0 }).format('h:mm A'); // Docs - Parse - Object
+//     var htmlContent = "<p>" + hour + "</p>";
+//     timeBlockContainer.append(htmlContent);
+// }
 
 
 
