@@ -2,17 +2,20 @@
 
 ## TODOs
 
-### Planner display
-- WHEN I scroll down THEN I am presented with timeblocks for standard business hours
-- WHEN I view the timeblocks for that day THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-
-### Interactivity
-- WHEN I click into a timeblock THEN I can enter an event
-- Use Git branching
-
 ### Storage
+- Practice Git branching
 - WHEN I click the save button for that timeblock THEN the text for that event is saved in local storage
+    - Event listeners on all the save buttons
+    - Save button sumbits form with sibling's textarea input
+    - Read about prevent default
+    - Set up JSON object of all the hours with associated textareas
 - WHEN I refresh the page THEN the saved events persist
 
 #### Questions
-- Will we need to write any CSS or should we be using only provided classes?
+
+#### References
+Moment.js homepage for data formatting
+Moment.js > Docs > Parse > Object to make my own Moment object
+Moment.js > Docs > Query > isBefore, etc to color-code the timeblocks
+Bootstrap > Layout > Grid for timeblock formatting
+Font Awesome to find and style the save icon
