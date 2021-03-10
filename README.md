@@ -7,9 +7,12 @@
 - WHEN I click the save button for that timeblock THEN the text for that event is saved in local storage
     - Event listeners on all the save buttons
     - Save button sumbits form with sibling's textarea input
-    - Read about prevent default
     - Set up JSON object of all the hours with associated textareas
 - WHEN I refresh the page THEN the saved events persist
+
+### Styling Tweaks
+- Work on save icon padding and hover behavior
+- Give some white space at the bottom of the page
 
 #### Questions
 
