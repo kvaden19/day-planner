@@ -1,12 +1,10 @@
 # day-planner
 
 ## TODOs
-- Last checks: JQuery, Current Day, save button behavior
-- Write README
 
-#### Questions
 
 #### References
+jQuery
 Moment.js homepage for data formatting
 Moment.js > Docs > Parse > Object to make my own Moment object
 Moment.js > Docs > Query > isBefore, etc to color-code the timeblocks

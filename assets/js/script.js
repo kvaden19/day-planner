@@ -1,9 +1,6 @@
 // Define DOM variables
 var currentDayP = $("#currentDay");
 var timeBlockContainer = $(".container");
-// var saveButtons = $(".saveBtn");
-var saveButtons = document.getElementsByClassName("saveBtn"); // Why doesn't JQuery work?
-var button_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // Define Moment variables
 var dayOfWeek = moment().format('dddd');
@@ -12,7 +9,7 @@ var date = moment().format('MMMM Do');
 // Load array of Timeblock objects from local storage
 var timeblocks = JSON.parse(localStorage.getItem("timeblocks"));
 
-// If the array does not exist, do this...
+// If the array does not exist, do this:
 // Define a Timeblock object constructor and a Timeblock representing each business hour
 if (timeblocks === null) {
     timeblocks = [];
@@ -61,14 +58,14 @@ for (var i=8; i<19; i++) {
     timeBlockContainer.append(timeBlockHTML);
 }
 
-for (index in button_indices) {
-    // saveButtons[key].click(function() { // Why doesn't JQuery work?
-    saveButtons[index].addEventListener("click", e => { 
+// Add event handling to the Save Button on every timeblock
+// When clicked, the corresponding timeblock text gets sent to local storage
+var saveButtons = $(".fa-save");
+saveButtons.click(function(e) {
+        var target = $(e.target);
+        var textbox = $(target.parent().prev().children()[0]);
+        var savedText = textbox.val();
         var timeblockIndex = e.target.dataset.hour - 8;
-        var savedText = e.target.parentNode.parentNode.childNodes[3].childNodes[0].value;
         timeblocks[timeblockIndex].text = savedText;
         localStorage.setItem("timeblocks", JSON.stringify(timeblocks));
-    });
-}
-
-// TODO: How do I tie the Timeblock array to the current day? Don't want it to persist on the next day...
+  });
