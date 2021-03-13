@@ -1,7 +1,6 @@
 # day-planner
 
 ## TODOs
-- Git merge back into main branch
 - Last checks: JQuery, Current Day, save button behavior
 - Write README
 
